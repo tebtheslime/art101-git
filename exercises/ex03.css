@@ -1,0 +1,42 @@
+div .test-div:hover{
+    background: rgb(206, 58, 83);
+}
+.test-div {
+    background: pink;
+    padding: 20px;
+    margin: 20px;
+    padding-block-end: 0%;
+}
+.test-div, .test-div2 {
+    color: purple;
+}
+.test-div2{
+    position: relative;
+    animation: rotatE 5s infinite;
+}
+@keyframes rotatE{
+    from{top: 100px;}
+    to{top: 0px;}
+}
+h2{
+    color:red;
+}
+div h2{
+    color:blue;
+}
+button.special{
+    background-color: aquamarine;
+}
+p .special{
+    color: blueviolet;
+}
+div .special{
+    width: 200px;
+}
+#bing{
+    display: flex;
+}
+#bong{
+    display: flex;
+    
+}
