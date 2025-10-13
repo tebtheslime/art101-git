@@ -35,6 +35,7 @@ div .special{
 }
 #bing{
     display: flex;
+    flex-direction: column-reverse;
 }
 #bong{
     display: flex;
