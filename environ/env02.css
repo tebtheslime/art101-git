@@ -8,11 +8,12 @@ body {background-image: url("../images/photography-project.png");
 #indigo {
     width: 600px;
     height: 450px;
-    padding-top: 150px;}
+}
 #foraging {
     display: flex;
-    flex-direction: row;
-    gap: 300px;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-end;
 }
 p {
     padding: 5px;
