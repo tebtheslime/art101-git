@@ -2,14 +2,15 @@
 
 //add a button titled click me
 let totalNumber = 0;
+let colors = ['Orchid', "Coral", "HotPink", "Plum"];
 
 //when clicked, 1++
 $("#needy-button").click( function(){
-    totalNumber = totalNumber + 3;
+    
+    buttonText("Clicks: " + totalNumber + " Color: " + colors[totalNumber % 4]);
+    $("body").css("background-color", colors[totalNumber % 4]);
 
-    let sentence = "I was clicked " + totalNumber + " times";
-
-    $("#needy-button").html(sentence + " divided by 3");
+    totalNumber = totalNumber + 1;
 
 })
 
@@ -27,15 +28,9 @@ $("#needy-button").mouseout(function(){
         $("#needy-button").html("wow a button");
     }
     else{
-        let sentence = "I was clicked " + totalNumber + " times";
-        $("#needy-button").html(sentence + " divided by 3");
+        buttonText("Clicks: " + totalNumber + " Color: " + colors[totalNumber % 4]);
     }
 })
-//show how many times clicked
-//on button text
-
-
-//add a limit
 
 //nvm i wanna add a function
 function buttonText(newText){
