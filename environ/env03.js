@@ -14,7 +14,7 @@ let indObj = {
 
 let environmentName = "very cool beach environment";
 
-let materials = ["seaweed", "coral", "feathers"];
+let materials = ["seaweed", "coral", "shells", "feathers"];
 
 $("#output1").html("<p>This is the '"+environmentName+"'!</p>");
 $("#flexbox").mouseover(function(){
