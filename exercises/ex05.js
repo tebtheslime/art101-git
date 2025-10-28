@@ -9,9 +9,7 @@ var colors = ["Orchid", "Coral", "HotPink", "Plum"];
 
 //button
 $("#needy-button").click(function () {
-   if (count < 5) { mood = "gresh and happy"; }
-   else if ((count >= 5) && (count < 10)) { mood = "keep pushing"; }
-   else { mood = "so tired"; }
+    moodFunction();
    $("#needy-button").html("Clicks: " + count + " Color: " + colors[colorCount] + " " + mood);
    
    /*if (colors[colorCount] == "Orchid") {
@@ -40,4 +38,10 @@ function makeImage(imageName){
 
 function changeBackground(newColor){
     $("body").css("background-color", newColor);
+};
+
+function moodFunction(){
+    if (count < 5) { mood = "gresh and happy"; }
+    else if ((count >= 5) && (count < 10)) { mood = "keep pushing"; }
+    else { mood = "so tired"; }
 };
