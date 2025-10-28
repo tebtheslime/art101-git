@@ -1,0 +1,38 @@
+body {background-image: url("../images/photography-project.png");
+        background-size: 2000px;
+        background-repeat: no-repeat;
+        background-position: right top;
+        background-attachment: scroll;
+        }
+#saffron {width: 400px}
+#indigo {
+    width: 600px;
+    height: 450px;
+}
+#foraging {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+#flexbox{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+#flexbox:hover{
+    background: rgb(141, 141, 247);
+}
+#descriptions{
+    display: flex;
+}
+#output3{
+    padding: 5px;
+    font: 20px Garamond;
+    width: 400px;
+}
+p {
+    padding: 5px;
+    background: rgb(227, 240, 255);
+    font: 18px Constantia;
+    color: darkblue;}   
