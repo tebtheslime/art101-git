@@ -1,3 +1,5 @@
+let currentMood = "";
+
 function checkMood(score, funny) {
     let result = ""
     function logic(){
@@ -25,28 +27,27 @@ function checkMood(score, funny) {
 function showMood() {
     let randomScore = Math.floor(Math.random() * 10) + 1;
     let funnyBool = Math.floor(Math.random() + 0.5);
-    let moodResult = checkMood(randomScore, funnyBool);
+    currentMood = checkMood(randomScore, funnyBool);
   
     $("#mood-display").html(
-      "Score: " + randomScore + "<br>Your mood is: <b>" + moodResult + "</b>"
+      "Score: " + randomScore + "<br>Your mood is: <b>" + currentMood + "</b>"
     );
-
-    return moodResult;
 }
   
   $("#mood-button").click(function () {
     showMood();
-    if (moodResult == "ex1"){
+
+    if (currentMood == "ex1"){
         $("body").css("background-color", "red");
-        $("#mood-display").append("<img src = '../images/Orchid.jpeg' width=200px>")
+        $("div").append("<p><img src = '../images/Orchid.jpeg' width=200px></p>")
     }
-    else if (moodResult == "ex2"){
+    else if (currentMood == "ex2"){
         $("body").css("background-color", "white");
-        $("#mood-display").append("<img src = '../images/Coral.jpeg' width=200px>")
+        $("div").append("<img src = '../images/Coral.jpeg' width=200px>")
     }
     else {
         $("body").css("background-color", "blue")
-        $("#mood-display").append("<img src = '../images/HotPink.jpg' width=200px>")
+        $("div").append("<img src = '../images/HotPink.jpg' width=200px>")
     }
   });
 
