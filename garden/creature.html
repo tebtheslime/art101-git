@@ -17,14 +17,17 @@
 
 <body>
    <!-- Main content goes here, inside BODY -->
-    <h1>Creatures Garden</h1>
+    <h1>🌺 Creatures Garden 🌺</h1>
 
     <div id = "creature-form">
         <h2>Add a creature</h2>
-        <div>Name: <input type=text id="crAdd"> <button id="crAdd">Add creature</button></div>
+        <div>Name: <input type=text id="crNameInput" maxlength="10"> </div>
+        <div>Color: <input id="crColorInput" type = "color"></div>
+        <div>Number of eyes: <input id="crEyeInput" type="number" max = "5"></div>
+        <button id="crAdd">Let it roam!</button>
     </div>
 
-    <div id="creature-list">creatures list be here</div>
+    <div id="creature-list">creatures list be here: </div>
 
 </body>
 </html>
