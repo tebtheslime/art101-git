@@ -30,7 +30,8 @@ function mushroomInfo(characterObject, color){
 $("#output1").html("<p>This is the '"+environmentName+"'!</p>");
 
 $(".flexbox").click(function(){
-    $('#output2').html("<p style='background-color:white'>" + materials.join(', ') + "!</p>");
+    //$('#output2').html("<p style='background-color:white'>" + materials.join(', ') + "!</p>");
+    $('#materialInput').show();
     let mushroom1 = $("#saffron");
     let mushroom2 = $("#indigo");
     function animateImage(image, speed){
@@ -42,9 +43,20 @@ $(".flexbox").click(function(){
     animateImage(mushroom2, 1000);
     animateImage(mushroom1, 750);
 });
-$(".flexbox").mouseout(function(){
-    $('#output2').html('');
-});
+$('#materialInput input').change(function(){
+    let tempval = $(this).val();
+    console.log(tempval);
+    /*$('#saffron').animate({marginLeft: '500px'}, "fast");
+    $('#saffron').animate({marginRight: '500px'}, "fast");*/
+    materials.push(tempval);
+    $('#output2').html("<p style='background-color:white'>" + materials.join(', ') + "! But could there be more? (try clicking)</p>");
+})
+$(".flexbox").hover(function(){
+        $('#output2').html("<p style='background-color:white'>" + materials.join(', ') + "! But could there be more? (try clicking)</p>");
+    }, function(){
+        $('#output2').html('');
+        $('#materialInput').hide();
+    });
 $('#indigo').hover(function(){
     mushroomInfo(indigoObject, 'rgba(141, 141, 247, 1)')
     }, function(){

@@ -7,7 +7,13 @@ $("#crAdd").click(function(){
     let crName = $("#crNameInput").val();
     let crColor = $("#crColorInput").val();
     let crEyesNum = $("#crEyeInput").val();
+    let crShape = $("#crShapeInput").val();
+    let crShapeHTML = "";
     let crEyesHTML = "";
+
+    if (crShape == "circle"){
+        crShapeHTML = "<img class = shape src='../images/Orchid.jpeg'>"
+    }
 
     for (let i=0; i<crEyesNum; i++){
         crEyesHTML = crEyesHTML + '<div class = eye>.</div>';
@@ -20,7 +26,7 @@ $("#crAdd").click(function(){
         //$("#crNameInput").html("done!") doesnt work for whatever reason)
         $("#creature-list").append(
             `<div class="creature">
-                <div class="creature-body" style = "background: ${crColor}">${crEyesHTML}</div>
+                <div class="creature-body" style = "background-color: ${crColor}">${crShapeHTML}${crEyesHTML}</div>
                 <div class="creature-info">${crName}</div>
             </div>`
         )

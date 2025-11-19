@@ -23,7 +23,7 @@ body {background-image: url("../images/photography-project.png");
     display:flex;
     flex-direction: row;
     justify-content: space-evenly;
-    height: 70px;
+    align-items: center;
 }
 .flexbox:hover{
     background: rgb(141, 141, 247);
